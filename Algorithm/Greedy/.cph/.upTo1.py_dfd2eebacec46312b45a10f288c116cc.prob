@@ -1,0 +1,1 @@
+{"name":"Local: upTo1","url":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Greedy\\upTo1.py","tests":[{"id":1762445624089,"input":"25 5","output":"2"},{"id":1762445682301,"input":"17 4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Greedy\\upTo1.py","group":"local","local":true}
