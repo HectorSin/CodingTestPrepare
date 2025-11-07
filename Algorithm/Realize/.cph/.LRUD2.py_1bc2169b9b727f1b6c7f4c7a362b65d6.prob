@@ -1,0 +1,1 @@
+{"name":"Local: LRUD2","url":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Realize\\LRUD2.py","tests":[{"id":1762525852789,"input":"5\nR R R U D D","output":"3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Realize\\LRUD2.py","group":"local","local":true}
