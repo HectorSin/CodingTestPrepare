@@ -18,3 +18,18 @@
 - [큰 수의 법칙](./Algorithm/Greedy/lawOfLargeNumber.py) - 가장 큰 수를 K번 더하고 두 번째 큰 수를 1번 더하는 패턴 반복
 - [숫자 카드 게임](./Algorithm/Greedy/numberCardGame.py) - 각 행의 최솟값 중 가장 큰 값 선택
 - [1이 될 때까지](./Algorithm/Greedy/upTo1.py) - N을 K로 나누거나 1을 빼서 1로 만들기
+
+### [구현 (Implementation)](./Algorithm/Realize)
+
+머릿속에 있는 알고리즘을 소스코드로 바꾸는 과정입니다.
+완전 탐색, 시뮬레이션 유형을 모두 포함하는 개념입니다.
+
+**특징:**
+- 문제에서 요구하는 대로 정확히 구현
+- 2차원 공간에서의 방향 이동 문제가 자주 출제
+- 시뮬레이션 및 완전 탐색 문제에 유용
+
+**예제 문제:**
+- [시각](./Algorithm/Realize/Time.py) - 00시 00분 00초부터 N시 59분 59초까지 3이 하나라도 포함된 시간의 개수 찾기
+- [왕실의 나이트](./Algorithm/Realize/CastleKnight.py) - 8×8 체스판에서 나이트가 이동할 수 있는 경우의 수 계산
+- [게임 개발](./Algorithm/Realize/GameCreate.py) - N×M 맵에서 캐릭터가 방문한 칸의 수 계산 (시뮬레이션)
