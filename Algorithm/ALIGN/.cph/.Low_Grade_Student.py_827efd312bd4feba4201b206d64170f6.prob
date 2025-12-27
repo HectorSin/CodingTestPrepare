@@ -1,0 +1,1 @@
+{"name":"Local: Low_Grade_Student","url":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\ALIGN\\Low_Grade_Student.py","tests":[{"id":1766803509704,"input":"2\n홍길동 95\n이순신 77","output":"이순신 홍길동"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\ALIGN\\Low_Grade_Student.py","group":"local","local":true}

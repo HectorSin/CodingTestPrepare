@@ -1,0 +1,1 @@
+{"name":"Local: TWO_BAE_REPLACE","url":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\ALIGN\\TWO_BAE_REPLACE.py","tests":[{"id":1766808177007,"input":"5 3\n1 2 5 4 3\n5 5 6 6 5","output":"26"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\ALIGN\\TWO_BAE_REPLACE.py","group":"local","local":true}
