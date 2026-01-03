@@ -1,0 +1,1 @@
+{"name":"Local: find_element","url":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Binary_Search\\find_element.py","tests":[{"id":1767405866054,"input":"5\n83792\n3\n579","output":"no yes yes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Jamtol\\git\\codingtest\\Algorithm\\Binary_Search\\find_element.py","group":"local","local":true}
