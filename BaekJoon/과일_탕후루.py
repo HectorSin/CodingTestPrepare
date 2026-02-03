@@ -106,37 +106,37 @@
 - 슬라이딩 윈도우(Sliding Window)
 """
 
-# 2s 1024mb
-from collections import Counter
+# # 2s 1024mb
+# from collections import Counter
 
-N = int(input())
+# N = int(input())
 
-fruit_list = list(map(int,input().split()))
+# fruit_list = list(map(int,input().split()))
 
-start = 0
-end = 0
+# start = 0
+# end = 0
 
-max_fruit = 0
+# max_fruit = 0
 
-def check_fruit(fruit_list, start, end):
-    """
-    과일 변수를 받아 2개인지 3개 이상인지 체크   
-    """
-    if len(Counter(fruit_list[start:end+1])) <= 2:
-        return True
-    else:
-        return False
+# def check_fruit(fruit_list, start, end):
+#     """
+#     과일 변수를 받아 2개인지 3개 이상인지 체크   
+#     """
+#     if len(Counter(fruit_list[start:end+1])) <= 2:
+#         return True
+#     else:
+#         return False
 
-for _ in range(N-1):
-    end += 1
+# for _ in range(N-1):
+#     end += 1
 
-    if not check_fruit(fruit_list, start, end):
-        while not check_fruit(fruit_list, start, end):
-            start += 1
+#     if not check_fruit(fruit_list, start, end):
+#         while not check_fruit(fruit_list, start, end):
+#             start += 1
     
-    max_fruit = max(max_fruit,(end - start + 1))
+#     max_fruit = max(max_fruit,(end - start + 1))
 
-print(max_fruit)
+# print(max_fruit)
 
 """
 === 백준 30804번 코드 리뷰 ===
@@ -177,4 +177,64 @@ print(max_fruit)
 
 [더 알아보면 좋을 것]
 - Dictionary의 `del` 연산 시간 복잡도 (O(1))
+"""
+
+
+# 2s 1024mb
+from collections import defaultdict
+
+N = int(input())
+
+fruit_list = list(map(int,input().split()))
+
+fruit_counts = defaultdict(int)
+
+left = 0
+max_fruit = 0
+
+for right in range(N):
+    fruit_counts[fruit_list[right]] += 1
+
+    while len(fruit_counts) > 2:
+        fruit_counts[fruit_list[left]] -= 1
+
+        if fruit_counts[fruit_list[left]] == 0:
+            del fruit_counts[fruit_list[left]]
+        
+        left += 1
+    
+    max_fruit = max(max_fruit, right - left + 1)
+
+print(max_fruit)
+
+"""
+=== 백준 30804번 코드 리뷰 ===
+
+[문제 이해]
+- 과일 탕후루: 연속된 구간에서 과일 종류가 2개 이하인 가장 긴 길이를 구함.
+
+[설계 프로세스 평가]
+- 주석 작성 여부: X (피드백 반영 반복으로 생략됨)
+- 설계-구현 일치도: 완벽
+- 개선 여부: 이전 O(N^2) 접근 방식에서 O(N)으로 성공적으로 개선했습니다.
+
+[현재 접근 방식]
+- `defaultdict`를 사용하여 현재 윈도우 내의 과일 종류별 개수를 관리.
+- `right`를 늘리며 카운트 증가, 종류가 2개를 초과하면 `left`를 줄이며 카운트 감소 및 `del`.
+- 투 포인터(Two Pointers) 알고리즘을 정석대로 구현했습니다.
+
+[분석 결과]
+- 시간 복잡도: O(N)
+  - `right`가 0부터 N까지 1회 이동한다고 할 때, `left`는 최대 N번 이동합니다.
+  - 각 단계에서 딕셔너리 접근은 평균 O(1)입니다.
+  - 따라서 전체 시간 복잡도는 O(N)으로, N=200,000 입력에 대해 충분히 통과합니다.
+- 예상 결과: 통과
+
+[힌트]
+💡 아주 훌륭하게 해결하셨습니다!
+- `defaultdict`와 `del`을 적절히 사용하여 시간 복잡도를 획기적으로 줄였습니다.
+- 이 패턴(슬라이딩 윈도우 + 해시맵)은 코딩 테스트에서 매우 자주 나오는 유형이니 잘 기억해두시면 좋습니다.
+
+[더 알아보면 좋을 것]
+- (선택) 입력 속도 최적화: `import sys; input = sys.stdin.readline` 사용 (Python에서 대량의 입력 처리 시 필수 테크닉 중 하나입니다)
 """
